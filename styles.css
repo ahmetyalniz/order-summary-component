@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+:root {
+  /* ### Primary */
+
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+
+  /* ### Neutral */
+
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+  background-color: var(--Pale-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: calc(100vh - 1px);
+}
+
+.card-container {
+  background-color: var(--Very-pale-blue);
+  display: inherit;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(560px * 0.95);
+  width: calc(340px * 0.95);
+  border-radius: 1.25rem;
+  text-align: center;
+}
+
+.card-container .img-container {
+  border-radius: inherit;
+
+  width: 100%;
+}
+.card-container .img-container img {
+  border-radius: 1.25rem 1.25rem 0 0;
+  width: 100%;
+}
+
+.card-container .text-container h2 {
+  color: var(--Dark-blue);
+  font-weight: 900;
+}
+.card-container .text-container p {
+  margin-top: 1rem;
+  padding: 0 1.75rem;
+  font-size: 1rem;
+  color: var(--Desaturated-blue);
+  margin-bottom: 1rem;
+}
+
+.card-container .prices-container {
+  width: 75%;
+  display: inherit;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-container .prices-container li {
+  list-style-type: none;
+}
+
+.card-container .prices-container li:first-child {
+  font-weight: 700;
+}
+
+.card-container .prices-container li:nth-child(2) {
+  font-weight: 500;
+  color: var(--Desaturated-blue);
+}
+
+.card-container .prices-container a {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.card-container .button-container {
+  display: inherit;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.card-container .button-container button {
+  border-radius: 1rem;
+  padding: 1rem;
+  border: none;
+  margin: 0 1.2rem;
+}
+
+.card-container .button-container .payment-button {
+  background-color: var(--Bright-blue);
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.payment-button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+.card-container .button-container .cancel-button {
+  background-color: var(--Very-pale-blue);
+  color: var(--Dark-blue);
+  font-size: 1rem;
+  font-weight: 700;
+  opacity: 0.3;
+}
+
+.cancel-button:hover {
+  color: var(--Dark-blue);
+  cursor: pointer;
+  opacity: 1;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
